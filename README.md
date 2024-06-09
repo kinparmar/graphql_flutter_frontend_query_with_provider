@@ -13,6 +13,8 @@ https://github.com/kinparmar/graphql_flutter_frontend_query_with_provider.git
   
   create the database name: 
   hello_world_db
+
+  
 4. Change the database details in the backend code 
   edit the config/config.json
   "development": {

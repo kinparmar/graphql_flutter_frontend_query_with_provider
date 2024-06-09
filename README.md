@@ -1,16 +1,52 @@
-# frontend_provider
+# graphql_flutter_frontend_query_with_provider
+Consuming GraphQL APIs With Flutter Provider Package
 
-A new Flutter project.
 
-## Getting Started
+1. Download backend code..
+git clone [https://github.com/kinparmar/ghar24](https://github.com/kinparmar/ghar24.git)
 
-This project is a starting point for a Flutter application.
+2. Download frontend code..
+https://github.com/kinparmar/graphql_flutter_frontend_query_with_provider.git
 
-A few resources to get you started if this is your first Flutter project:
+3. Download and setup MySQL databases.
+  Start the mysql.
+  
+  create the database name: 
+  hello_world_db
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+  
+4. Change the database details in the backend code 
+  edit the config/config.json
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "hello_world_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+5. run the backend end code
+   node .\src\index.js  
+   Server is running on localhost:4000
+6. Open the browser, add the user details through browser in the database and verify as well.
+     mutation CreateUser {
+      createUser(name: "Kiran", email: "kiran@gmail.com", 
+      password: "password") {
+        name
+        email
+      }
+    }
+![image](https://github.com/kinparmar/graphql_flutter_frontend_query_with_provider/assets/119789351/41fb94a6-6b21-4df3-9813-521f325b611d)
+
+7. verify the user details through browser from the database.
+   query allUser {
+      allUser {
+        name
+        email
+      }
+    }
+8. now got to front end code and run the front end code.
+   1. cd frontend_provider
+   2. fultter run -d chrome
+
+
+  This page should be update..

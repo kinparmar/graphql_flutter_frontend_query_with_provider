@@ -1,0 +1,2 @@
+# graphql_flutter_frontend_query_with_provider
+Consuming GraphQL APIs With Flutter Provider Package
